@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>親子館悠遊館 - 預約系統整理公告</title>
+  <style>
+    /* CSS 變數：溫暖低飽和莫蘭迪與大地色調 */
+    :root {
+      --bg-cream: #f3efd2;
+      --card-bg: #FFFFFF;
+      --sage-white: #ffffff;
+      --sage-brown: #532e10;
+      --warm-coral: #E08E6D;
+      --warm-yellow: #FFF9E6;
+      --border-yellow: #F0C987;
+      --text-dark: #3F474A;
+      --text-muted: #7A868B;
+      --shadow-soft: 0 10px 30px rgba(123, 158, 135, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang TC", "Microsoft JhengHei", sans-serif;
+      background-color: var(--bg-cream);
+      color: var(--text-dark);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 1.5rem;
+    }
+
+    /* 主要等候卡片 */
+    .waiting-card {
+      background: var(--card-bg);
+      max-width: 520px;
+      width: 100%;
+      padding: 2.5rem 2rem;
+      border-radius: 28px;
+      box-shadow: var(--shadow-soft);
+      text-align: center;
+      border: 1px solid rgba(123, 158, 135, 0.15);
+      position: relative;
+    }
+
+    /* 頂部場館狀態標籤 */
+    .brand-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 1rem;
+      background: var(--sage-brown);
+      color: var(--sage-white);
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+    }
+
+    /* 主視覺小熊與積木微動畫 - 圖片位置置中 */
+    .illustration-box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto 1.5rem auto;
+      user-select: none;
+      animation: gentleFloat 5s ease-in-out infinite;
+    }
+
+    .illustration-box img {
+      display: block;
+      margin: 0 auto;
+    }
+
+    @keyframes gentleFloat {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-8px) rotate(1.5deg); }
+    }
+
+    h1 {
+      font-size: 1.55rem;
+      color: var(--text-dark);
+      margin-bottom: 0.6rem;
+      font-weight: 700;
+    }
+
+    .desc {
+      color: var(--text-muted);
+      font-size: 0.96rem;
+      line-height: 1.65;
+      margin-bottom: 1.6rem;
+    }
+
+    /* 育兒家長安心提示盒 */
+    .reassurance-panel {
+      background: var(--warm-yellow);
+      border-left: 4px solid var(--border-yellow);
+      border-radius: 12px;
+      padding: 1rem 1.2rem;
+      text-align: left;
+      font-size: 0.88rem;
+      line-height: 1.55;
+      color: #634F2C;
+      margin-bottom: 1.8rem;
+    }
+
+    .reassurance-panel strong {
+      display: block;
+      color: #8C5B14;
+      margin-bottom: 0.25rem;
+    }
+
+    h2 {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body> 
+
+  <main class="waiting-card">
+    <div class="brand-badge"> 臺南市政府社會局府委辦．悠遊兒童親子館</div>
+    
+    <div class="illustration-box" aria-hidden="true">
+      <img src="bearteacher.jpeg" alt="Illustration">
+    </div>
+
+    <h1>小熊老師正在收拾玩具</h1>
+    <p class="desc">              
+      由於預約人潮眾多，系統正在為您安排名額！<br>
+      請各位家長耐心等候！
+    </p>
+
+    <section class="reassurance-panel">
+      <strong>安心小叮嚀：</strong>
+      若您方才已點選「確認預約」，系統將保留您的填寫的進度與名額10分鐘。
+      請安心等候，切勿重複按送出或關閉頁面。
+    </section>   
+    <h 2>若有相關疑問，請洽詢 臺南市政府社會局兒童福利科 06-2991111</h2>
+
+</body>
+</html>
